@@ -1,0 +1,40 @@
+{
+  "name": "quickstart-deque-appium-webdriverio-demo",
+  "version": "1.0.0",
+  "description": "Simple js project to install and test an app on devices and execute appium automation together with Deque accessibility scanning",
+  "main": "test/specs/index.js",
+  "directories": {
+    "test": "test/specs"
+  },
+  "scripts": {
+    "test.android.local.emu2": "npx wdio configs/wdio.conf.ts",
+    "test.android.local.emu": "npx wdio backup/wdio.android.local.emu.conf.ts",
+    "test.android.sauce.emu.eu": "REGION=eu npx wdio backup/wdio.android.sauce.emu.conf.ts",
+    "test.android.sauce.emu.us": "npx wdio backup/wdio.android.sauce.emu.conf.ts",
+    "test.android.sauce.real.device.eu": "REGION=eu npx wdio backup/wdio.android.sauce.rdc.conf.ts",
+    "test.android.sauce.real.device.us": "npx wdio backup/wdio.android.sauce.rdc.conf.ts",
+    "test.ios.local.sim": "npx wdio configs/wdio.ios.local.sim.conf.ts",
+    "test.ios.sauce.sim.eu": "REGION=eu npx wdio configs/wdio.ios.sauce.sim.conf.ts",
+    "test.ios.sauce.sim.us": "npx wdio configs/wdio.ios.sauce.sim.conf.ts",
+    "test.ios.sauce.real.device.eu": "REGION=eu npx wdio configs/wdio.ios.sauce.rdc.conf.ts",
+    "test.ios.sauce.real.device.us": "npx wdio configs/wdio.ios.sauce.rdc.conf.ts"
+  },
+  "author": "Mobile Team",
+  "license": "MIT",
+  "devDependencies": {
+    "appium": "^2.11.1",
+    "axe-core": "^4.9.1",
+    "@axe-devtools/appium-plugin": "^2.2.0",
+    "@wdio/appium-service": "8.39.1",
+    "@wdio/types": "^8.39.0",
+    "@wdio/cli": "^8.39.1",
+    "@wdio/runner": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/sauce-service": "^8.39.1",
+    "@wdio/spec-reporter": "^8.39.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
+    "chai": "^5.1.1"
+  }
+}
