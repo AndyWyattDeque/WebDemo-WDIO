@@ -1,27 +1,28 @@
-// wdio.android.local.emu.conf.ts
-import {join} from 'path';
+// wdio.ios.local.emu.conf.ts
 import {config as baseConfig } from './wdio.shared.local.appium.conf';
 import merge from 'deepmerge';
+import {join} from 'path';
 
 export const config: WebdriverIO.Config = merge(baseConfig, {
     specs: [
-        '../test/specs/**/android.spec.ts'
+        '../test/specs/ios.spec.ts'
     ],
     runner: 'local',
     maxInstances: 1,
     capabilities: [{
-        platformName: 'Android',
+        platformName: 'iOS',
         'appium:options': {
-            'automationName': 'UiAutomator2',
-            'deviceName': 'emulator-5554',
+            'automationName': 'XCUITest',
+            'deviceName': 'iPhone 15 Pro',
+            'platformVersion': '17.5',
+            'appium:udid': 'C958039D-015F-48DE-9D14-78FB09E037B4',
             'orientation': 'PORTRAIT',
             'app': join(
                 __dirname,
                 '../',
-                './apps/app-sample-debug.apk',
+                './apps/axe-devtools-ios-sample-app.app',
             ),
-            'appWaitActivity': '.MainActivity',
-            'appPackage': 'com.deque.mobile.axedevtoolssampleapp',
+            'appium:bundleId': 'com.dequesystems.axe-devtools-ios-sample-app',
             'noReset': true,
             'newCommandTimeout': 240,
         }

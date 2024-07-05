@@ -7,8 +7,7 @@
     "test": "test/specs"
   },
   "scripts": {
-    "test.android.local.emu2": "npx wdio configs/wdio.conf.ts",
-    "test.android.local.emu": "npx wdio backup/wdio.android.local.emu.conf.ts",
+    "test.android.local.emu": "npx wdio configs/wdio.android.local.emu.conf.ts",
     "test.android.sauce.emu.eu": "REGION=eu npx wdio backup/wdio.android.sauce.emu.conf.ts",
     "test.android.sauce.emu.us": "npx wdio backup/wdio.android.sauce.emu.conf.ts",
     "test.android.sauce.real.device.eu": "REGION=eu npx wdio backup/wdio.android.sauce.rdc.conf.ts",
@@ -35,6 +34,7 @@
     "@wdio/spec-reporter": "^8.39.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
-    "chai": "^5.1.1"
+    "chai": "^5.1.1",
+    "deepmerge": "^4.3.1"
   }
 }
