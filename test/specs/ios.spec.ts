@@ -1,9 +1,10 @@
-import { axeSettings as iOSAxeSettings } from '../../configs/axe-settings';
+import { axeSettings, axeSettings as iOSAxeSettings } from '../../configs/axe-settings';
 
 describe('iOS App flow', () => {
     it('should run some simple tests against the sample iOS app', async () => {
                 try {
                     // This will start the accessibility scan and upload the results to Dashboard
+                    iOSAxeSettings.tags.push('iOS');
                     const result = await driver.execute('axe:scan', iOSAxeSettings);
                 } finally {
                     await driver.pause(3000);
