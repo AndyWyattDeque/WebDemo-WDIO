@@ -1,5 +1,4 @@
 import { config } from './wdio.shared.sauce.conf';
-import merge from 'deepmerge';
 
 // ==================
 // Specify Test Files
@@ -18,7 +17,6 @@ config.capabilities = [
     {
         browserName: 'chrome',
         platformName: 'android',
-        //'appium:deviceName': 'Google Pixel 3 GoogleAPI Emulator',
         'appium:platformVersion': '13',
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'uiAutomator2',

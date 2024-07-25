@@ -1,4 +1,5 @@
 import { axeSettings, axeSettings as iOSAxeSettings } from '../../configs/axe-settings';
+import { browser as driver} from '@wdio/globals';
 
 describe('iOS App flow', () => {
     it('should run some simple tests against the sample iOS app', async () => {

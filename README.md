@@ -1,5 +1,11 @@
 # Simple Appium Client for iOS and Android
 
+## Runtime environment
+
+- this project has been written and tested using:
+    - Node v16.20.2
+    - NPM 8.19.4
+
 ## Install
 
 - Install packages: `npm install`

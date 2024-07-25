@@ -1,12 +1,15 @@
 import { axeSettings as androidAxeSettings } from '../../configs/axe-settings';
+import { browser as driver} from '@wdio/globals';
 
 describe('Android App flow', () => {
     it('should run some simple tests against the sample Android app',
         async () => {
             try {
+                await driver.pause(3000);
+
+                //setup additional tags for use in the dashboard
                 androidAxeSettings.tags.push('Android');
 
-                await driver.pause(3000);
                 // click on "Start XML" button with text
                 const startXMLButton = await $('//android.widget.Button[@text="Start XML"]');
                 await startXMLButton.click();

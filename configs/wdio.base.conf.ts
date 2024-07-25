@@ -1,4 +1,5 @@
 // wdio.base.conf.ts
+
 export const config: WebdriverIO.Config = {
   capabilities: [],
   logLevel: 'debug',
@@ -16,8 +17,7 @@ export const config: WebdriverIO.Config = {
     timeout: 180000,
   },
 
-  // =====
-  // Hooks
-  // =====
-  //
+  before: function () {
+    require('ts-node').register({ files: true});
+  }
 };

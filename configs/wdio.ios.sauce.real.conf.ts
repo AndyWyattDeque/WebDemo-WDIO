@@ -1,5 +1,4 @@
 import { config } from './wdio.shared.sauce.conf';
-import merge from 'deepmerge';
 
 // ==================
 // Specify Test Files
