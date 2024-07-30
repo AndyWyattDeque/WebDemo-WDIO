@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "test.chrome.browser.sauce": "REGION=eu npx wdio configs/wdio.chrome.browser.sauce.conf.ts",
     "test.android.local.emu": "npx wdio configs/wdio.android.local.emu.conf.ts",
     "test.android.sauce.real.device.eu": "REGION=eu npx wdio configs/wdio.android.sauce.real.conf.ts",
     "test.android.sauce.real.device.us": "npx wdio configs/wdio.android.sauce.real.conf.ts",
@@ -33,6 +34,7 @@
     "appium": "^2.11.1",
     "appium-xcuitest-driver": "^7.23.0",
     "axe-core": "^4.9.1",
+    "@axe-core/webdriverio": "4.9.1",
     "chai": "^5.1.1",
     "deepmerge": "^4.3.1",
     "ts-node": "^10.9.2",

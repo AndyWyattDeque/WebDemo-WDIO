@@ -16,13 +16,12 @@ export const config: WebdriverIO.Config = merge(baseConfig, {
     region: (process.env.REGION || 'eu') as Options.SauceRegions,
 
     build: 'Deque Accessibility Build',
-
     name: 'Andy-Test',
 
 // =============================================
 // Max instances of the same device in the cloud
 // =============================================
-    maxInstances: 20,
+    maxInstances: 20
 
 });
 
