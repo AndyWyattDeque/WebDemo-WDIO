@@ -1,5 +1,4 @@
 import { strictEqual } from 'assert';
-import { AxeResults } from 'axe-core';
 
 describe('Deque Cook Shop Spec', () => {
     it('should navigate to the Deque Cookshop website and do an accessibility scan', async () => {

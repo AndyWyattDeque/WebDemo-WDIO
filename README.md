@@ -37,3 +37,6 @@ Make sure Appium is started and running before running the app here.
 
 : to run against Sauce Labs Android Real Device (NOTE: only real devices supported for Axe testing on Sauce), run:
     npm run test.android.sauce.emu.XX  where XX = us or eu depending on the region you need to run on
+
+: to run a browser test against Sauce Labs run:
+    npm run test.chrome.browser.sauce

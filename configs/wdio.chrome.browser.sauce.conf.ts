@@ -6,10 +6,11 @@ export const config: WebdriverIO.Config = merge(baseConfig, {
     maxInstances: 1,
     capabilities: [{
         browserName: 'chrome',
-        platformName: 'Windows 11',
+        platformName: 'Windows 10',
         browserVersion: 'latest',
          'sauce:options': {
-            screenResolution: '1920x1080'
+            screenResolution: '1920x1080',
+            seleniumVersion: '4.0.0-beta-2'
         //     extendedDebugging: true,
         //     capturePerformance: true
         }
